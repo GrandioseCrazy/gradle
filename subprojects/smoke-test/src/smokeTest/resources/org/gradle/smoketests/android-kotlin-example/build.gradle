@@ -2,7 +2,7 @@ buildscript {
     repositories {
         jcenter()
         google()
-        maven { url = "https://dl.bintray.com/kotlin/kotlin-eap/" }
+        maven { url = "https://dl.bintray.com/kotlin/kotlin-dev/" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:$androidPluginVersion'
@@ -16,7 +16,7 @@ System.properties['com.android.build.gradle.overrideVersionCheck'] = 'true'
 repositories {
     jcenter()
     google()
-    maven { url = "https://dl.bintray.com/kotlin/kotlin-eap/" }
+    maven { url = "https://dl.bintray.com/kotlin/kotlin-dev/" }
 }
 
 apply plugin: 'com.android.application'
