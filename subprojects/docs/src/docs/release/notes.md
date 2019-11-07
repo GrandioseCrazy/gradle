@@ -8,15 +8,17 @@ Include only their name, impactful features should be called out separately belo
  [Some person](https://github.com/some-person)
 -->
 
-[Mark Nordhoff](https://github.com/MarkNordhoff),
-[Kazuki Matsuda](https://github.com/kazuki-ma),
-and [Nicholas Gates](https://github.com/gatesn).
+<!-- 
+## 1
 
-## Features for Gradle tooling providers
+details of 1
 
-### `TestLauncher` can select specific methods
+## 2
 
-The `TestLauncher` interface in the Tooling API is capable of launching tests by specifying the name of the test classes or methods. If there are multiple test tasks contain those test classes/methods, then all tasks are executed. This is not ideal for IDEs: developers usually want to execute only one test variant at the time. To overcome this, Gradle 6.1 introduces the `withTaskAndTestClasses()` and `withTaskAndTestMethods()` methods.
+details of 2
+
+## n
+-->
 
 ## Upgrade Instructions
 
@@ -30,33 +32,11 @@ For Java, Groovy, Kotlin and Android compatibility, see the [full compatibility 
 
 <!-- Do not add breaking changes or deprecations here! Add them to the upgrade guide instead. --> 
 
-## Improvements for plugin authors
-
-### New managed property types
-
-TBD - Managed properties of type `DomainObjectSet<T>` now supported.
-
-### New factory methods
-
-TBD - `ObjectFactory` has a method to create `ExtensiblePolymorphicDomainObjectContainer` instances.
-TBD - `ObjectFactory` has a method to create `NamedDomainObjectSet` instances.
-TBD - `ObjectFactory` has a method to create `NamedDomainObjectList` instances.
-
 ## Promoted features
 Promoted features are features that were incubating in previous versions of Gradle but are now supported and subject to backwards compatibility.
 See the User Manual section on the “[Feature Lifecycle](userguide/feature_lifecycle.html)” for more information.
 
 The following are the features that have been promoted in this Gradle release.
-
-### Gradle Dependency Cache can be relocated
-
-With this release, the Gradle Dependency cache, that is the content under `$GRADLE_HOME/caches/modules-2`, can be relocated, for data cached by Gradle version 6.1 and later.
-This enables its copy from host to host, allowing to fully leverage all the cached information: artifacts downloaded and metadata parsed.
-
-Note that priming the cache and consuming it needs to use the same Gradle version for maximum effect.
-See [the documentation](userguide/dependency_resolution.html#sub:cache_copy) for details on this.
-
-This is one step in helping out ephemeral CI setups where host images can be seeded with dependency cache content, reducing the amout of downloads during the build.
 
 <!--
 ### Example promoted
